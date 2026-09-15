@@ -1,7 +1,7 @@
 ---
 last_updated: 2026-09-15
 version: 1.0.0
-product_version: 0.1.0
+product_version: 1.0.0
 ---
 
 # User Manual
