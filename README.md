@@ -8,7 +8,9 @@ Tasks have a title, due date, optional notes, priority, and a completion state. 
 
 Get the latest build from the [Releases page](https://github.com/PlainTxtOffice/todo.txt/releases/latest), or download [todo_txt_portable.exe](https://github.com/PlainTxtOffice/todo.txt/releases/download/v1.0.0/todo_txt_portable.exe) (v1.0.0, 23 MB) directly.
 
-The build is self-contained and portable — no installer, and **no Python installation required**. Download it, put it wherever you like, and run it.
+The build is self-contained and portable — no installer, and **no Python installation required**. Download it and run it.
+
+Put it in a folder you can write to. The application stores its settings and logs beside the executable, so a protected location such as `C:\Program Files\` will stop settings from saving. A folder under Documents, your Desktop, or a USB drive works.
 
 SHA-256 for v1.0.0:
 
