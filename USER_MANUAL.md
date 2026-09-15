@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-07-31
+last_updated: 2026-09-15
 version: 1.0.0
 product_version: 0.1.0
 ---
@@ -16,8 +16,13 @@ Tasks can include a title, due date, *notes*, priority, completion state, projec
 
 ### Requirements
 
-- The application requires Python 3.12 or later
-- Uses PySide6 6.8 or later for the graphical interface.
+- The packaged Windows build (`todo_txt_portable.exe`) is self-contained and
+does not require Python or any other installation.
+- Place it in a folder you can write to. The application stores its settings
+and logs beside the executable, so a protected location such as
+`C:\Program Files\` will prevent settings from saving.
+- Building from source requires Python 3.12 or later, and PySide6 6.8 or later
+for the graphical interface.
 
 ### Storage
 
@@ -105,18 +110,20 @@ date.
 
 ## Configuration
 
-Open **Edit > Settings** or press `Ctrl+,`. Settings are stored in
-`src/config/settings.json`. Saving display or priority settings updates the
-open task view. Changing the `todo.txt` file path requires restarting the
-application.
+Open **Edit > Settings** or press `Ctrl+,`. Saving display or priority settings
+updates the open task view. Changing the `todo.txt` file path requires
+restarting the application.
+
+Settings are stored beside the executable in the packaged build, and at
+`src/config/settings.json` when running from source.
 
 ### Supported Settings
 
-| Key | Type | Current value | Description |
+| Key | Type | Default | Description |
 | --- | --- | --- | --- |
 | `priority.minimum` | Uppercase letter | `A` | First priority offered by the task editor. |
 | `priority.maximum` | Uppercase letter | `E` | Last priority offered by the task editor. |
-| `todoFile` | File path | `C:/Users/rmoor/Dropbox/documents/todo/todo.txt` | Shared source-of-truth file; restart after changing it. |
+| `todoFile` | File path | None | Shared source-of-truth file; restart after changing it. |
 | `dateDisplayFormat` | `iso` or `weekday_short` | `iso` | Controls list and editor date presentation. |
 
 ### Date Presentation
