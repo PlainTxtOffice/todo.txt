@@ -12,6 +12,12 @@ The configured `todo.txt` file is the single source of truth. To keep that file 
 - rejects a save when another application has changed the file since it was read
 - alerts you when Dropbox conflicted copies are present
 
+## Task Format
+
+Each task is a single line. The diagram below shows what each part means:
+
+![Anatomy of a todo.txt task line, annotating completion marker, priority, completion and creation dates, description, and project, context, and key/value tags](description.svg)
+
 ## Configuration
 
 Set the shared file under **Edit → Settings**. Changing it takes effect after restarting the app.
@@ -29,6 +35,11 @@ Run the test suite:
 ```powershell
 .venv/Scripts/python.exe -m pytest
 ```
+
+## Documentation
+
+- [User Manual](USER_MANUAL.md) — how to use the application.
+- [Format Specification](todo_spec.md) — the `todo.txt` format in detail.
 
 ## Glossary
 
